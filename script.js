@@ -3,7 +3,7 @@ var temp, lastTemp, humidity, LastHumidity, timestamp;
 function update() {
   console.log('one');
   $.ajax({
-     url: 'http://data.sparkfun.com/output/xROLbJzAlMcjwlN5dolp.json',
+     url: 'https://data.sparkfun.com/output/xROLbJzAlMcjwlN5dolp.json',
      jsonp: 'callback',
      cache: true,
      dataType: 'jsonp',
