@@ -6,7 +6,7 @@ var sp = new SerialPort("/dev/ttyACM0", {
   parser: serialport.parsers.readline("\n")
 });
 
-var privateKey = 'vznZraVDlyt2R09Jdn0n';
+var privateKey = process.env.SPARKFUN_PRIVATE_KEY;
 var lastTemp, lastHumidity, temp, humidity;
 
 sp.open(function (err) {
@@ -20,8 +20,8 @@ sp.open(function (err) {
         lastTemp = temp;
         lastHumidity = humidity;
         
-        request('https://data.sparkfun.com/input/KJQ87RovVrUN6LzqMxLx?private_key=' + privateKey + '&humidity=' + humidity + '&temp=' + temp, function(err, res, body) {
-          if (!err && res.statusCode == 200) console.log('Data sent succesfully!');
+        request('https://data.sparkfun.com/input/xROLbJzAlMcjwlN5dolp?private_key=' + privateKey + '&humidity=' + humidity + '&temp=' + temp, function(err, res, body) {
+          if (!err && res.statusCode == 200) console.log('Data sent successfully!');
           else console.log('Error while sending data!');
         });
       }
