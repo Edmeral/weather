@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Edmeral/arduino-weather-station/issues"
   },
-  "homepage": "https://github.com/Edmeral/arduino-weather-station"
+  "homepage": "https://github.com/Edmeral/arduino-weather-station",
+  "dependencies": {
+    "serialport": "^1.4.6"
+  }
 }
