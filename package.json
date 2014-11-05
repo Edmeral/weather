@@ -1,0 +1,19 @@
+{
+  "name": "arduino-weather-station",
+  "version": "1.0.0",
+  "description": "to add",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Edmeral/arduino-weather-station.git"
+  },
+  "author": "Aissam BELHACHMI <edmeral.aissam@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Edmeral/arduino-weather-station/issues"
+  },
+  "homepage": "https://github.com/Edmeral/arduino-weather-station"
+}
