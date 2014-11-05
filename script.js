@@ -11,5 +11,8 @@ $.ajax({
      var humidity = response[0]['humidity'];
      var timestamp = response[0]['timestamp'];
      console.log(temp, humidity, timestamp);
+
+     $('#temperature').text('TEMPERATURE: ' + temp + ' °C');
+     $('#humidity').text('HUMIDITY: ' + humidity + ' %');
    }
  });
