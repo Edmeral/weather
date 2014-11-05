@@ -1,6 +1,7 @@
 var temp, lastTemp, humidity, LastHumidity, timestamp;
 
-setInterval(function() {
+function update() {
+  console.log('one');
   $.ajax({
      url: 'http://data.sparkfun.com/output/xROLbJzAlMcjwlN5dolp.json',
      jsonp: 'callback',
@@ -26,4 +27,7 @@ setInterval(function() {
 
      }
    });
-}, 10000);
+}
+
+update();
+setInterval(update, 10000);
