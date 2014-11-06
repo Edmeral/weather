@@ -24,3 +24,15 @@ html, body {
 #humidity {
   background-color: #628A98;
 }
+
+@media screen and (max-width: 1200px) {
+  #temperature, #humidity {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #temperature, #humidity {
+    font-size: 5rem;
+  }
+}
