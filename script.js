@@ -12,9 +12,9 @@ function update() {
      },
      success: function(response) {
 
-       temp = response[0]['temp'];
-       humidity = response[0]['humidity'];
-       timestamp = response[0]['timestamp'];
+       temp = response[0].temp;
+       humidity = response[0].humidity;
+       timestamp = response[0].timestamp;
 
        // When something changes update the page
        if (temp != lastTemp || humidity != LastHumidity) {
