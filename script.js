@@ -2,6 +2,7 @@ var temp, lastTemp, humidity, LastHumidity, timestamp;
 
 function update() {
   console.log('one');
+  // Getting the data from SparkFun API
   $.ajax({
      url: 'https://data.sparkfun.com/output/xROLbJzAlMcjwlN5dolp.json',
      jsonp: 'callback',
