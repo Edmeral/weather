@@ -19,11 +19,11 @@ html, body {
 }
 
 #temperature {
-  background-color: #EF7380;
+  background-color: #E5AD62;
 }
 
 #humidity {
-  background-color: #628A98;
+  background-color: #BCD09D;
 }
 
 @media screen and (max-width: 1200px) {
