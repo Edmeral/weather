@@ -21,7 +21,7 @@ sp.open(function (err) {
         lastHumidity = humidity;
         
         request('https://data.sparkfun.com/input/xROLbJzAlMcjwlN5dolp?private_key=' + privateKey + '&humidity=' + humidity + '&temp=' + temp, function(err, res, body) {
-          if (!err && res.statusCode == 200) console.log('Data sent successfully!');
+          if (!err && res.statusCode == 200) console.log('Data sent successfully! (' + temp + '°C, ' + humidity + '%)');
           else console.log('Error while sending data!');
         });
       }
