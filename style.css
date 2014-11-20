@@ -43,6 +43,10 @@ html, body {
   }
 }
 
+a:visited{
+     color: inherit;
+}
+
 footer {
   height: 10%;
   width: 100%;
@@ -54,4 +58,21 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.ico {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  border: solid 1px #bbb;
+  border-radius: 15px;
+  float: right;
+  line-height: 30px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;;
+}
+
+.ico:hover {
+  background-color: #bbb;
+  color: white;
 }
