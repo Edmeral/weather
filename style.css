@@ -43,6 +43,10 @@ html, body {
   }
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
 a:visited{
      color: inherit;
 }
@@ -56,7 +60,6 @@ footer {
   font-size: 0.8rem;
   font-weight: bold;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
