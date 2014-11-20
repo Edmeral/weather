@@ -47,6 +47,11 @@ footer {
   height: 10%;
   width: 100%;
   background-color: #fff;
-  text-align: right;
-  color: rgba(0, 0, 0, 0.25);
+  color: #cccccc;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

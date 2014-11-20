@@ -20,7 +20,7 @@ function update() {
        if (temp != lastTemp || humidity != LastHumidity) {
          $('#temperature').text('TEMPERATURE: ' + temp + ' °C');
          $('#humidity').text('HUMIDITY: ' + humidity + ' %');
-         $('footer').text(moment(timestamp).fromNow());
+         $('footer span').text(moment(timestamp).fromNow());
 
          lastTemp = temp;
          lastHumidity = humidity;
