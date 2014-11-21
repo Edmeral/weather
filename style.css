@@ -61,6 +61,13 @@ footer {
   font-weight: bold;
   display: flex;
   align-items: center;
+  box-sizing: border-box;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.icons-container {
+  margin-left: auto;
 }
 
 .ico {
@@ -69,10 +76,10 @@ footer {
   width: 30px;
   border: solid 1px #bbb;
   border-radius: 15px;
-  float: right;
   line-height: 30px;
   text-align: center;
-  transition: all 0.3s ease-in-out;;
+  transition: all 0.3s ease-in-out;
+  margin-left: 20px;
 }
 
 .ico:hover {
