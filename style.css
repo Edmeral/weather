@@ -25,24 +25,6 @@ html, body {
   background-color: #BCD09D;
 }
 
-@media screen and (max-width: 1200px) {
-  #temperature, #humidity {
-    font-size: 4rem;
-  }
-}
-
-@media screen and (max-width: 980px) {
-  #temperature, #humidity {
-    font-size: 3.5rem;
-  }
-}
-
-@media screen and (max-width: 680px) {
-  #temperature, #humidity {
-    font-size: 2.5rem;
-  }
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -85,4 +67,31 @@ footer {
 .ico:hover {
   background-color: #bbb;
   color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  #temperature, #humidity {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #temperature, #humidity {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  #temperature, #humidity {
+    font-size: 1.9rem;
+  }
+
+  footer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  #what-ico, #where-ico {
+    display: none;
+  }
 }
