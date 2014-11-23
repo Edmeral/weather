@@ -47,6 +47,11 @@ footer {
   box-sizing: border-box;
   padding-left: 100px;
   padding-right: 100px;
+  transition: all 0.3s ease-in-out;
+}
+
+footer:hover {
+  color: #909090;
 }
 
 .icons-container {
