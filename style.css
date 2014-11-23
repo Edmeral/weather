@@ -36,6 +36,7 @@ a:visited{
 footer {
   height: 10%;
   width: 100%;
+  min-height: 40px;
   background-color: #fff;
   color: #cccccc;
   text-transform: uppercase;
