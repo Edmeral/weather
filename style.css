@@ -90,8 +90,8 @@ footer {
     padding-left: 10px;
     padding-right: 10px;
   }
-  
-  #what-ico, #where-ico {
+
+  #where-ico {
     display: none;
   }
 }
