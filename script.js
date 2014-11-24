@@ -2,6 +2,10 @@ var temp, lastTemp, humidity, LastHumidity, timestamp;
 var request = new XMLHttpRequest();
 var url = 'https://data.sparkfun.com/output/xROLbJzAlMcjwlN5dolp.json?page=1';
 
+var tempTag = document.querySelector('#temperature');
+var humidityTag = document.querySelector('#humidity');
+var timestampTag = document.querySelector('footer span');
+
 function update() {
   // Getting the data from SparkFun API
   request.open('GET', url, true);
@@ -17,9 +21,9 @@ function update() {
 
       // When something changes update the page
       if (temp != lastTemp || humidity != LastHumidity) {
-        $('#temperature').text('TEMPERATURE: ' + temp + ' °C');
-        $('#humidity').text('HUMIDITY: ' + humidity + ' %');
-        $('footer span').first().text(moment(timestamp).fromNow());
+        tempTag.innerHTML = 'TEMPERATURE: ' + temp + ' °C';
+        humidityTag.innerHTML = 'HUMIDITY: ' + humidity + ' %';
+        timestampTag.innerHTML = moment(timestamp).fromNow();
 
         lastTemp = temp;
         lastHumidity = humidity;
