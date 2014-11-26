@@ -8,6 +8,13 @@ window.onload = function () {
   var humidityTag = document.querySelector('#humidity');
   var timestampTag = document.querySelector('footer span');
 
+  //Favicon configuration
+  var favicon = new Favico({
+    type: 'rectangle',
+    bgColor: '#E5AD62',
+    textColor : '#ff0'
+  });
+
   function update() {
     // Getting the data from SparkFun API
     request.open('GET', url, true);
@@ -29,6 +36,8 @@ window.onload = function () {
 
           lastTemp = temp;
           lastHumidity = humidity;
+          
+          favicon.badge(temp);
         }
       }
     };
