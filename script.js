@@ -12,7 +12,9 @@ window.onload = function () {
   var favicon = new Favico({
     type: 'rectangle',
     bgColor: '#E5AD62',
-    textColor : '#ff0'
+    textColor: '#ff0',
+    animation: 'none',
+    fontFamily: 'Varela Round'
   });
 
   function update() {
@@ -36,7 +38,7 @@ window.onload = function () {
 
           lastTemp = temp;
           lastHumidity = humidity;
-          
+
           favicon.badge(temp);
         }
       }
