@@ -93,8 +93,9 @@ footer:hover {
   }
 
   footer {
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size: 0.76rem;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   #where-ico {
