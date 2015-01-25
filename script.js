@@ -1,56 +1,54 @@
-window.onload = function () {
-  var temp, lastTemp, humidity, LastHumidity, timestamp;
-  
-  var request = new XMLHttpRequest();
-  var url = 'https://data.sparkfun.com/output/xROLbJzAlMcjwlN5dolp.json?page=1';
+var temp, lastTemp, humidity, LastHumidity, timestamp;
 
-  var tempTag = document.querySelector('#temperature');
-  var humidityTag = document.querySelector('#humidity');
-  var timestampTag = document.querySelector('footer span');
+var request = new XMLHttpRequest();
+var url = 'https://data.sparkfun.com/output/xROLbJzAlMcjwlN5dolp.json?page=1';
 
-  //Favicon configuration
-  var favicon = new Favico({
-    type: 'rectangle',
-    bgColor: '#E5AD62',
-    textColor: '#ff0',
-    animation: 'none',
-    fontFamily: 'Varela Round'
-  });
+var tempTag = document.querySelector('#temperature');
+var humidityTag = document.querySelector('#humidity');
+var timestampTag = document.querySelector('footer span');
 
-  function update() {
-    // Getting the data from SparkFun API
-    request.open('GET', url, true);
+//Favicon configuration
+var favicon = new Favico({
+  type: 'rectangle',
+  bgColor: '#E5AD62',
+  textColor: '#ff0',
+  animation: 'none',
+  fontFamily: 'Varela Round'
+});
 
-    request.onload = function() {
+function update() {
+  // Getting the data from SparkFun API
+  request.open('GET', url, true);
 
-      if (request.status >= 200 && request.status < 400) {
-        response = JSON.parse(request.responseText);
+  request.onload = function() {
 
-        temp = response[0].temp;
-        humidity = response[0].humidity;
-        timestamp = response[0].timestamp;
+    if (request.status >= 200 && request.status < 400) {
+      response = JSON.parse(request.responseText);
 
-        // When something changes update the page
-        if (temp != lastTemp || humidity != LastHumidity) {
-          tempTag.innerHTML = 'TEMPERATURE: ' + temp + ' °C';
-          humidityTag.innerHTML = 'HUMIDITY: ' + humidity + ' %';
-          timestampTag.innerHTML = moment(timestamp).fromNow();
+      temp = response[0].temp;
+      humidity = response[0].humidity;
+      timestamp = response[0].timestamp;
 
-          lastTemp = temp;
-          lastHumidity = humidity;
+      // When something changes update the page
+      if (temp != lastTemp || humidity != LastHumidity) {
+        tempTag.innerHTML = 'TEMPERATURE: ' + temp + ' °C';
+        humidityTag.innerHTML = 'HUMIDITY: ' + humidity + ' %';
+        timestampTag.innerHTML = moment(timestamp).fromNow();
 
-          favicon.badge(temp);
-        }
+        lastTemp = temp;
+        lastHumidity = humidity;
+
+        favicon.badge(temp);
       }
-    };
+    }
+  };
 
-    request.onerror = function() {
-      throw new Error("Can't get the Data for Sparkfun");
-    };
+  request.onerror = function() {
+    throw new Error("Can't get the Data for Sparkfun");
+  };
 
-    request.send();
-  }
+  request.send();
+}
 
-  update();
-  setInterval(update, 10000);
-};
+update();
+setInterval(update, 10000);
