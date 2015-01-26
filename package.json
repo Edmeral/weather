@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Edmeral/arduino-weather-station",
   "dependencies": {
+    "dotenv": "^0.4.0",
     "request": "^2.47.0",
     "serialport": "^1.4.6"
   }
