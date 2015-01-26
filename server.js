@@ -1,5 +1,8 @@
 var sensorLib = require('node-dht-sensor');
 var request = require('request');
+var dotenv = require('dotenv');
+dotenv.load();
+
 
 var privateKey = process.env.SPARKFUN_PRIVATE_KEY;
 var lastTemp, lastHumidity;

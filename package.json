@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/Edmeral/weather",
   "dependencies": {
+    "dotenv": "^0.4.0",
     "node-dht-sensor": "0.0.6",
     "request": "^2.47.0"
   }
