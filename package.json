@@ -1,0 +1,21 @@
+{
+  "name": "rapsberry-pi-weather-station",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Edmeral/weather.git"
+  },
+  "author": "Aissam BELHACHMI <edmeral.aissam@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Edmeral/weather/issues"
+  },
+  "homepage": "https://github.com/Edmeral/weather",
+  "dependencies": {
+    "request": "^2.47.0"
+  }
+}
