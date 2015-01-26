@@ -1,4 +1,6 @@
 var request = require('request');
+var dotenv = require('dotenv');
+dotenv.load();
 var serialport = require("serialport");
 var SerialPort = serialport.SerialPort; // localize object constructor
 
