@@ -7,25 +7,24 @@ var url = 'https://data.sparkfun.com/output/xROLbJzAlMcjwlN5dolp.json?page=1';
 var request = new XMLHttpRequest();
 
 request.onload = function() {
+  if (request.status >= 200 && request.status < 400) {
+    response = JSON.parse(request.responseText);
 
-    if (request.status >= 200 && request.status < 400) {
-      response = JSON.parse(request.responseText);
+    var temp = response[0].temp;
+    var humidity = response[0].humidity;
+    var timestamp = response[0].timestamp;
 
-      var temp = response[0].temp;
-      var humidity = response[0].humidity;
-      var timestamp = response[0].timestamp;
+    tempTag.innerHTML = 'TEMPERATURE: ' + temp + ' °C';
+    humidityTag.innerHTML = 'HUMIDITY: ' + humidity + ' %';
+    timestampTag.innerHTML = moment(timestamp).fromNow();
 
-      tempTag.innerHTML = 'TEMPERATURE: ' + temp + ' °C';
-      humidityTag.innerHTML = 'HUMIDITY: ' + humidity + ' %';
-      timestampTag.innerHTML = moment(timestamp).fromNow();
+    favicon.badge(temp);
+  }
+};
 
-      favicon.badge(temp);
-    }
-  };
-
-  request.onerror = function() {
-    throw new Error("Can't get the data for Sparkfun");
-  };
+request.onerror = function() {
+  throw new Error("Can't get the data for Sparkfun");
+};
 
 
 //Favicon configuration
